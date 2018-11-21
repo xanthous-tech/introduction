@@ -99,6 +99,43 @@ export default class Presentation extends React.Component {
             </Appear>
           </Text>
         </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading> Services Provided </Heading>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary">
+          <List>
+            <ListItem>
+              AWS Solutions Architecture, especially Serverless Architecture with AWS Lambda
+            </ListItem>
+            <ListItem>
+              High-Performance Data Processing and Search Engine Solutions with Elasticsearch and Apache Kafka, specialized in Digital Marketing Space
+            </ListItem>
+            <ListItem>
+              Rapid Web / Native Design and Prototyping with React.js + Apollo GraphQL
+            </ListItem>
+            <ListItem>
+              Distributed Systems Design with Kubernetes (k8s)
+            </ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <List>
+            <ListItem>
+              Service Oriented Architecture (SOA) with Node.js, Java, and Golang microservices
+            </ListItem>
+            <ListItem>
+              Reactive Systems Design with Reactive Streams Specifications (RxJava, Reactor, RxJS)
+            </ListItem>
+            <ListItem>
+              UI / UX Design (B2B, B2C, Enterprise SaaS)
+            </ListItem>
+            <ListItem>
+              Go-to-China software solutions via Wechat
+            </ListItem>
+          </List>
+        </Slide>
+
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Project
             name="AMZKungFu"
