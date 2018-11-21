@@ -34,8 +34,14 @@ const theme = createTheme({
   secondary: "Helvetica"
 });
 // Import Images
+// AmznKungfu
+import amznkungfulogo from '../assets/amzkungfu_logo.png'
 import ppc1 from '../assets/ppc1.png'
 import ppc2 from '../assets/ppc2.png'
+
+import initialviewlogo from '../assets/initialviewlogo.png'
+import iv1 from '../assets/iv1.png'
+import iv2 from '../assets/iv2.png'
 
 // Import Componets
 import { DarkSlide } from './slides';
@@ -46,7 +52,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <DarkSlide transition={["zoom"]} >
+        <DarkSlide transition={["fade"]} >
           <Text bold textColor="primary">
             Imagine your company is at a crucial stage.
             The time has come to effectively build an MVP or you want to reach the next level with your business.
@@ -66,6 +72,7 @@ export default class Presentation extends React.Component {
           <ProjectComponent
             name="AMZKungFu"
             subtitle="Amazon Seller Ads Automation Platform"
+            logo={amznkungfulogo}
             website={"amzkungfu.com"}
             desc={[
               '- 2 months prototyping',
@@ -78,7 +85,36 @@ export default class Presentation extends React.Component {
               ppc2,
             ]} />
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <ProjectComponent
+            name="Quanlook"
+            subtitle="A Celebrity-Fans Community in China"
+            website={"quanlook.com"}
+            desc={[
+              "- 2 month prototyping",
+              "- Automatically syncing social feed from Android Client using RxJava",
+              "- GraphQL-powered frontend for rapid development",
+              "- Wechat-integrated solution, payments included."
+            ]}
+            images={[
+              'https://www.upwork.com/att/download/portfolio/agencies/uid/922749561128783872/profile/projects/files/1054259776749740032',
+              'https://www.upwork.com/att/download/portfolio/agencies/uid/922749561128783872/profile/projects/files/1054259785664409600',
+            ]} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <ProjectComponent
+            name="Initial View"
+            website={"initialview.com"}
+            logo={initialviewlogo}
+            desc={[
+              "- 1 month prototyping",
+              "- React SPA development from designer files",
+              "- Used Styled-compomemts for styling"
+            ]}
+            images={[
+              iv1,
+              iv2
+            ]} />
         </Slide>
       </Deck>
     );

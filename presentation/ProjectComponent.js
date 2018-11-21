@@ -77,15 +77,22 @@ const FancyLinkWrapper = styled.div`
   }
 `
 
+const LogoHolder = styled.img`
+  max-width: 200px;
+`
 
 
 export default class ProjectComponent extends React.Component {
   render() {
-    const { name, subtitle, desc, images, website } = this.props
+    const { name, subtitle, desc, images, website, logo } = this.props
     return (
       <ProjectSection>
         <TextColumn>
-          <h1 className="header"> {name} </h1>
+          {
+            (logo)
+              ? <LogoHolder src={logo} />
+              : <h1 className="header"> {name} </h1>
+          }
           <h3 className="subtitle"> {subtitle} </h3>
           {desc.map(p => (
             <p>
