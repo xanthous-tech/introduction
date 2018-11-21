@@ -33,20 +33,28 @@ const theme = createTheme({
   primary: "Montserrat",
   secondary: "Helvetica"
 });
+
 // Import Images
+
 // AmznKungfu
 import amznkungfulogo from '../assets/amzkungfu_logo.png'
 import ppc1 from '../assets/ppc1.png'
 import ppc2 from '../assets/ppc2.png'
 
+import quanlooklogo from '../assets/quanlooklogo.png';
+import quanlook1 from '../assets/quanlook1.png';
+import quanlook2 from '../assets/quanlook2.png';
+
+//Initial View
 import initialviewlogo from '../assets/initialviewlogo.png'
 import iv1 from '../assets/iv1.png'
 import iv2 from '../assets/iv2.png'
 
 // Import Componets
 import { DarkSlide } from './slides';
-import ProjectComponent from './ProjectComponent';
-import { codespan } from './components'
+import Project from '../components/Project';
+import Origins from '../components/Origins';
+import { codespan, Highlighted } from './components'
 
 export default class Presentation extends React.Component {
   render() {
@@ -64,12 +72,35 @@ export default class Presentation extends React.Component {
           </Appear>
         </DarkSlide>
         <Slide transition={["fade"]} bgColor="code">
-          <Code>
-             We are a team of freelancers who love to help startups grow. We all used to work in startup environments and understand what it takes to build a product from 0 to 1, and from 1 to 100. We have helped startups and teams from all over the world to implement the idea from scratch, optimize and improve their product performance and development workflow, and take their businesses to the next stage ASAP.
-          </Code>
+          <Text textColor="primary" textAlign="left">
+            We are a team of freelancers who love to help startups grow.
+            <br />
+            We all used to work in startup environments and understand what it takes
+            to build a product <b>from 0 to 1</b>, and <b>from 1 to 100</b>.
+            <br />
+            We have helped startups and teams from all over the world to implement the idea from scratch,
+            optimize and improve their product performance and development workflow,
+            and take their businesses to the next stage <b>ASAP</b>.
+          </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="code">
+          <Text textColor="primary" textAlign="left">
+            Not only we understand startups,
+            <br />
+            <Appear>
+              <div>
+                <Text textColor="#777777" textSize="2.3rem">
+                  but we also came from industry leaders such as{' '}
+                  <Highlighted>Amazon.com</Highlighted> (both Retail and AWS), <Highlighted>Alibaba</Highlighted>, and <Highlighted>Tencent</Highlighted>,
+                  and know how to do things at scale.
+                </Text>
+                <Origins />
+              </div>
+            </Appear>
+          </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <ProjectComponent
+          <Project
             name="AMZKungFu"
             subtitle="Amazon Seller Ads Automation Platform"
             logo={amznkungfulogo}
@@ -85,10 +116,11 @@ export default class Presentation extends React.Component {
               ppc2,
             ]} />
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <ProjectComponent
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Project
             name="Quanlook"
             subtitle="A Celebrity-Fans Community in China"
+            logo={quanlooklogo}
             website={"quanlook.com"}
             desc={[
               "- 2 month prototyping",
@@ -96,13 +128,14 @@ export default class Presentation extends React.Component {
               "- GraphQL-powered frontend for rapid development",
               "- Wechat-integrated solution, payments included."
             ]}
+            mobile
             images={[
-              'https://www.upwork.com/att/download/portfolio/agencies/uid/922749561128783872/profile/projects/files/1054259776749740032',
-              'https://www.upwork.com/att/download/portfolio/agencies/uid/922749561128783872/profile/projects/files/1054259785664409600',
+              quanlook1,
+              quanlook2
             ]} />
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <ProjectComponent
+          <Project
             name="Initial View"
             website={"initialview.com"}
             logo={initialviewlogo}

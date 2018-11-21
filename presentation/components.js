@@ -1,5 +1,6 @@
 import React, { createElement, Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import {
   Heading,
@@ -57,6 +58,11 @@ export const cursor = {
   hideWhenDone: false,
   hideWhenDoneDelay: 1000
 };
+
+export const Highlighted = styled.span`
+  border-bottom: 3px solid #9dffc8;
+`
+
 
 export default {
   a: Link,

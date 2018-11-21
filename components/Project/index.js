@@ -15,15 +15,19 @@ const Column = styled.div`
 `
 
 const PictureColumn = styled(Column)`
+  flex-flow: ${props => (props.mobile) ? "row": "columm"} nowrap;
+  flex: 1;
   img {
-    width: 100%;
+    width: ${props => (props.mobile) ? "60%": "100%"};
     margin-bottom: 10px;
+    margin-right: 10px;
   }
 `
 
 const TextColumn = styled(Column)`
   align-items: flex-start;
   margin-right: 10px;
+  min-height: 500px;
   .header {
     text-align: left;
     font-size: 1em;
@@ -84,7 +88,7 @@ const LogoHolder = styled.img`
 
 export default class ProjectComponent extends React.Component {
   render() {
-    const { name, subtitle, desc, images, website, logo } = this.props
+    const { name, subtitle, desc, images, website, logo, mobile } = this.props
     return (
       <ProjectSection>
         <TextColumn>
@@ -108,7 +112,7 @@ export default class ProjectComponent extends React.Component {
             </a>
           </FancyLinkWrapper>
         </TextColumn>
-        <PictureColumn>
+        <PictureColumn mobile={mobile}>
           {
             images.map(i => (
               <Appear>
