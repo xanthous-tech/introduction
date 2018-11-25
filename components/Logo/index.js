@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import xanthouslogo from '../../assets/xanthouslogo.svg'
+import xTechLogo from '../../assets/x-tech-logo-2.svg'
 
 const Wrapper = styled.div`
   position: fixed;
@@ -17,7 +18,7 @@ const Wrapper = styled.div`
 const Logo = (props) => {
   return (
     <Wrapper>
-      <img src={xanthouslogo} />
+      <img src={xTechLogo} />
     </Wrapper>
   )
 }

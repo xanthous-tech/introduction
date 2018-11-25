@@ -1,6 +1,9 @@
 // Import React
 import React from "react";
 
+// Import styled
+import styled from 'styled-components';
+
 // Import Spectacle Core tags
 import {
   BlockQuote,
@@ -23,14 +26,14 @@ import createTheme from "spectacle/lib/themes/default";
 require("normalize.css");
 
 const theme = createTheme({
-  primary: "white",
+  primary: "#666666",
   secondary: "#1F2022",
   tertiary: "#03A9FC",
   quaternary: "#CECECE",
   green: "#33B969",
   code: "#1d1f21",
 }, {
-  primary: "Montserrat",
+  primary: "Ubuntu",
   secondary: "Helvetica"
 });
 
@@ -52,7 +55,9 @@ import iv1 from '../assets/iv1.png'
 import iv2 from '../assets/iv2.png'
 
 // Import Componets
-import { DarkSlide } from './slides';
+import {
+  HomeSlide,
+} from './slides/index';
 import Logo from '../components/Logo'
 import Project from '../components/Project';
 import Origins from '../components/Origins';
@@ -63,18 +68,8 @@ export default class Presentation extends React.Component {
     return (
       <React.Fragment>
         <Logo />
-        <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-          <DarkSlide transition={["fade"]} >
-            <Text bold textColor="primary">
-              Imagine your company is at a crucial stage.
-              The time has come to effectively build an MVP or you want to reach the next level with your business.
-            </Text>
-            <Appear>
-              <Text textColor="green">
-                At whatever stage you are, we’ve got you covered
-              </Text>
-            </Appear>
-          </DarkSlide>
+        <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} controls={false}>
+          <HomeSlide />
           <Slide transition={["fade"]} bgColor="code">
             <Text textColor="primary" textAlign="left">
               We are a team of freelancers who love to help startups grow.
