@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import xanthouslogo from '../../assets/xanthouslogo.svg'
-import xTechLogo from '../../assets/x-tech-logo-2.svg'
+import xTechLogo from '../../assets/x-tech-logo.svg'
 
 const Wrapper = styled.div`
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  width: 130px;
-  z-index: 100;
+  position: relative;
   img {
-    width: 100%;
+    position: absolute;
+    width: 200px;
     height: auto;
+    top: 50px;
+    left: 50px;
+    z-index: 100;
   }
 `
 

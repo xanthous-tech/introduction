@@ -26,7 +26,7 @@ import createTheme from "spectacle/lib/themes/default";
 require("normalize.css");
 
 const theme = createTheme({
-  primary: "#666666",
+  primary: "rgba(0, 0, 0, 0.8)",
   secondary: "#1F2022",
   tertiary: "#03A9FC",
   quaternary: "#CECECE",
