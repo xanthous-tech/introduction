@@ -15,7 +15,7 @@
   "husky": {
       "hooks": {
           "pre-commit": "npm run build",
-          "pre-push": "git commit -am \"deploy build\""
+          "pre-push": "git commit -am \"deploy build\" --no-verify"
       }
   },
   "author": "",
