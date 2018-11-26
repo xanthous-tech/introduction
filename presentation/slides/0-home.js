@@ -53,7 +53,7 @@ const SubTitle = styled(Text)`
 `;
 
 export const HomeSlide = () => (
-  <StyledSlide transition={["slide"]} bgColor="white">
+  <StyledSlide transition={["fade"]} bgColor="white">
     <Title bold textColor="primary">
       <Highlight>We build software </Highlight>
       <Highlight>to help business grow.</Highlight>

@@ -68,7 +68,7 @@ export default class Presentation extends React.Component {
     return (
       <React.Fragment>
         <Logo />
-        <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} controls={false}>
+        <Deck transition={["fade"]} transitionDuration={500} theme={theme} controls={false}>
           <HomeSlide />
           <Slide transition={["fade"]} bgColor="code">
             <Text textColor="primary" textAlign="left">
