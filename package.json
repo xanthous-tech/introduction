@@ -12,11 +12,18 @@
     "export": "spectacle-renderer --delay 3000",
     "start": "cross-env NODE_ENV=development node server.js"
   },
+  "husky": {
+      "hooks": {
+          "pre-commit": "npm run build",
+          "pre-push": "git commit -a --amend --no-edit"
+      }
+  },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "@babel/runtime": "^7.1.2",
+    "husky": "^1.2.0",
     "normalize.css": "8.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
